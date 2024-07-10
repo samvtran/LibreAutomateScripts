@@ -6,18 +6,18 @@ partial class Program {
 	/// </summary>
 	void TextReplacements(AutotextTriggers tt) {
 		tt.DefaultPostfixType = TAPostfix.None;
-		
+
 		var tr = tt.SimpleReplace;
-		
-		tt[";giggle"] = o => o.Replace("🤭");
-		
+
+		tr[";giggle"] = "🤭";
+
 		tr[";zettel"] = DateTime.Now.ToString("yyyyMMddHHmmss");
 		tr[";date"] = DateTime.Now.ToString("yyyy-MM-dd");
 		tr[";time"] = DateTime.Now.ToString("HH:mm:ss");
-		
+
 		tr[";en"] = "–";
 		tr[";em"] = "—";
-		
+
 		tr[";guid"] = Guid.NewGuid().ToString();
 	}
 }
