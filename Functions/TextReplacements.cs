@@ -11,9 +11,9 @@ partial class Program {
 
 		tr[";giggle"] = "🤭";
 
-		tr[";zettel"] = DateTime.Now.ToString("yyyyMMddHHmmss");
-		tr[";date"] = DateTime.Now.ToString("yyyy-MM-dd");
-		tr[";time"] = DateTime.Now.ToString("HH:mm:ss");
+		tt[";zettel"] = o => o.Replace(DateTime.Now.ToString("yyyyMMddHHmmss"));
+		tt[";date"] = o => o.Replace(DateTime.Now.ToString("yyyy-MM-dd"));
+		tt[";time"] = o => o.Replace(DateTime.Now.ToString("HH:mm:ss"));
 
 		tr[";en"] = "–";
 		tr[";em"] = "—";
