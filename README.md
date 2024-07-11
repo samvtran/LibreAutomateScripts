@@ -4,5 +4,6 @@ Hello! This is a collection of my [LibreAutomate scripts](https://www.libreautom
 all of my AutoHotKey scripts (and then some).
 
 ## Installation
-Add any of these scripts to your `Functions` folder and reference any functions you want to use
-by calling them in the appropriate triggers file.
+
+Add any files in this repo to a LibreAutomate project (like `@Triggers and toolbars`)
+and the functions will be available within the `Program` class.
