@@ -1,1 +1,6 @@
 ﻿.idea
+
+# .NET stuff
+bin
+obj
+.vs
