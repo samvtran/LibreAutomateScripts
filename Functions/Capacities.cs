@@ -24,9 +24,9 @@ partial class Program {
 			keys.send("Ctrl+Shift+E");
 
 			var blockButton = w.Elm["web:GROUPING", "Turn blocks into"];
-			if (!blockButton.Exists()) return;
+			if (!blockButton.Exists(2)) return;
 
-			var colorButton = blockButton.Find(2).Navigate("parent previous first");
+			var colorButton = blockButton.Find().Navigate("parent previous first");
 			if (colorButton == null) return;
 
 			colorButton.MouseClick();
