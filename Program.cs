@@ -10,4 +10,7 @@ using Au.Triggers;
 /// </summary>
 partial class Program {
     ActionTriggers Triggers { get; } = new();
+
+    string HtmlEntitiesFilePath { get; } = @"P:\LibreAutomateScripts\html-entities.json";
 }
+
