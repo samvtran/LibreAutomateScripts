@@ -37,10 +37,12 @@ partial class Program
         };
 
         // Alt+1-4 for h1-h4
-        foreach (var i in Enumerable.Range(1, 4)) {
-            hk[$"Alt+{i}"] = o => {
-                keys.send("Space", "/", "h", $"{i}", 100);
-                keys.send("Enter", "Backspace");
+        foreach (var i in Enumerable.Range(1, 4))
+        {
+            hk[$"Alt+{i}"] = o =>
+            {
+                var hashes = new string('#', i);
+                keys.send("Home", $"!{hashes}", "Space");
             };
         }
 
