@@ -13,7 +13,7 @@ partial class Program
         hk["Ctrl+Shift+N"] = o =>
         {
             var w = wnd.active;
-            var button = w.Elm["web:BUTTON", also: o => o.Name == "Add" || o.Name == "New"];
+            var button = w.Elm["BUTTON", also: o => o.Name == "Add" || o.Name == "New"];
 
             if (!button.Exists()) return;
 
@@ -42,7 +42,7 @@ partial class Program
             hk[$"Alt+{i}"] = o =>
             {
                 var hashes = new string('#', i);
-                keys.send("Home", $"!{hashes}", "Space");
+                keys.send("Home", $"!{hashes}", "Space", "End");
             };
         }
 
