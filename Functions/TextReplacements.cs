@@ -1,5 +1,7 @@
 using System.Text.Json;
 using System.Text.Json.Nodes;
+using System.Windows.Forms;
+using System.Windows.Input;
 using Au.Triggers;
 
 partial class Program
@@ -22,7 +24,7 @@ partial class Program
         tr[";en"] = "–";
         tr[";em"] = "—";
 
-        tr[";guid"] = Guid.NewGuid().ToString();
+        tt[";guid"] = o => o.Replace(Guid.NewGuid().ToString());
     }
 
     /// <summary>
