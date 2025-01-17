@@ -8,7 +8,7 @@ partial class Program
     void ThunderbirdMinimizeOnClose(MouseTriggers m)
     {
         Triggers.Of.Window(cn: "MozillawindowClass", of: "thunderbird.exe",
-            also: o => o.Window.Name.EndsWith("Mozilla Thunderbird"));
+            also: o => o.Window.Name.Contains("Mozilla Thunderbird"));
         Triggers.FuncOf.NextTrigger = o =>
         {
             var pos = mouse.xy;
